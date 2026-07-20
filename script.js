@@ -96,37 +96,3 @@ document.addEventListener('scroll', () => {
   });
 }, { passive: true });
 
-// ── Contact form submit handler ─────────────────
-document.addEventListener('DOMContentLoaded', () => {
-  const form = document.getElementById('enquiry-form');
-  if (!form) return;
-
-  form.addEventListener('submit', async (event) => {
-    event.preventDefault();
-
-    const formData = new FormData(form);
-    const data = new URLSearchParams();
-
-    for (const [key, value] of formData.entries()) {
-      data.append(key, value);
-    }
-
-    try {
-      const response = await fetch(form.action, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: data,
-      });
-
-      if (response.ok) {
-        window.location.href = '/success.html';
-      } else {
-        const result = await response.json();
-        alert(result.error || 'Unable to submit your enquiry. Please try again.');
-      }
-    } catch (error) {
-      console.error('Form submission failed:', error);
-      alert('A network error occurred. Please try again later.');
-    }
-  });
-});
