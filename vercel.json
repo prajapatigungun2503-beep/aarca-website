@@ -1,0 +1,9 @@
+{
+  "version": 2,
+  "routes": [
+    {
+      "src": "/api/submit-form",
+      "dest": "/api/submit-form.js"
+    }
+  ]
+}

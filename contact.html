@@ -70,11 +70,11 @@
             </div>
           </div>
           <form
+            id="enquiry-form"
             class="contact-form"
             name="aarca-enquiry"
             method="POST"
-            data-netlify="true"
-            netlify-honeypot="bot-field"
+            action="/api/submit-form"
           >
             <input type="hidden" name="form-name" value="aarca-enquiry" />
             <p class="hidden"><label>Do not fill this field <input name="bot-field" /></label></p>
