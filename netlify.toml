@@ -5,8 +5,3 @@
 [[forms]]
   name = "aarca-enquiry"
   honeypot = "bot-field"
-
-[[redirects]]
-  from = "/success"
-  to = "/success.html"
-  status = 200
