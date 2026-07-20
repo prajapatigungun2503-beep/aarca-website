@@ -17,6 +17,26 @@ if (menuBtn && navLinks) {
   });
 }
 
+// ── Netlify form submission handler ────────────
+function handleFormSubmit(event) {
+  event.preventDefault();
+  const form = event.target;
+  const data = new FormData(form);
+
+  fetch('/', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    body: new URLSearchParams(data),
+  })
+    .then(() => {
+      window.location.href = '/success.html';
+    })
+    .catch((error) => {
+      console.error('Form submission error:', error);
+      alert('There was an error submitting the form. Please try again.');
+    });
+}
+
 // ── Ripple click effect on cards ──────────────
 function addRipple(e) {
   const card = e.currentTarget;
