@@ -70,12 +70,14 @@
             </div>
           </div>
           <form
+            id="enquiry-form"
             class="contact-form"
             name="aarca-enquiry"
             method="POST"
             action="https://formspree.io/f/xvzerwwl"
           >
             <input type="hidden" name="_next" value="/success.html" />
+            <input type="hidden" name="_format" value="json" />
             <input type="hidden" name="form-name" value="aarca-enquiry" />
             <p class="hidden"><label>Do not fill this field <input name="bot-field" /></label></p>
             <label><span>Name</span><input type="text" name="name" required /></label>
@@ -120,5 +122,6 @@
       <p class="copyright">© 2026 AARCA Process Solution LLP. All rights reserved.</p>
     </footer>
     <script src="script.js"></script>
+    <script src="form-handler.js"></script>
   </body>
 </html>
