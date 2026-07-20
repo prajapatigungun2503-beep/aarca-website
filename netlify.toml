@@ -1,2 +1,15 @@
 [build]
   publish = "."
+  command = ""
+
+[[redirects]]
+  from = "/success"
+  to = "/success.html"
+  status = 200
+
+[functions]
+  directory = "functions"
+
+[[forms]]
+  name = "aarca-enquiry"
+  honeypot = "bot-field"
